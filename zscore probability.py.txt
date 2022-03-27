@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar 20 15:20:45 2022
+
+@author: yogashree
+"""
+import scipy.stats as stats
+from statistics import NormalDist
+data1 = int(input("Enter mu value : "))
+data2 = int(input("Enter sigma value :"))
+nd = NormalDist(mu = (data1), sigma = (data2))
+data = int(input("Enter x value : "))
+nd.cdf(data)
+values = [2,4,5,6,7,8,12,13,13,14,16,18,20]
+
+zscores = stats.zscore(values)
+print(zscores)
